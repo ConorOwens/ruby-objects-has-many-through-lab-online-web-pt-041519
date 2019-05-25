@@ -14,7 +14,12 @@ class Genre
     @@all
   end
   
+  def songs
+    Songs.all.collect
+  end
+  
   def artists
-    
+    Songs.all.collect {|song| song.artist}
+  end
   
 end
